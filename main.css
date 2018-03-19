@@ -1,0 +1,233 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+/* Các CSS này dành cho toàn bộ website và desktop */
+body {
+    background: #fff;
+}
+
+/*!* Dành cho điện thoại *!*/
+/*@media all and (max-width: 480px) {*/
+
+/*}*/
+
+/*!* Dành cho máy tính bảng *!*/
+/*@media all and (max-width: 1024px) {*/
+
+/*}*/
+/*!* Dành cho màn hình desktop *!*/
+/*@media all and (min-width: 1280px) {*/
+
+/*}*/
+
+#menu{
+    width: 1280px;
+    min-height:950px ;
+    margin: 0 auto;
+    background: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
+    font-size: 15px;
+}
+article {
+    float: right;
+    width: 1010px;
+    position: relative;
+}
+
+/*thanh menu bên trái*/
+#menu-nav {
+    position: relative;
+    background: rgba(10, 10, 10, 0.8);
+    height: 950px;
+    width: 270px;
+    float: left;
+}
+
+/*menu phân cấp*/
+nav{
+    position: absolute;
+    bottom: 270px;
+}
+nav > ul > li {
+    display: inline-block;
+    padding-left: 30px;
+    text-align: justify;
+    position: relative;
+    width: 240px;
+}
+
+nav > ul > li:hover {
+    background-color: #FF8000;
+}
+
+nav > ul > li > a {
+    display: block;
+    width: 240px;
+    text-decoration: none;
+    padding: 0px;
+    line-height: 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+nav > ul {
+    padding: 0px;
+    width: 270px;
+    margin: 0px;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul ul {
+    position: absolute;
+    top: 1px;
+    display: none;
+    padding-left: 240px;
+    margin: 0px;
+    list-style: none;
+    width: 270px;
+}
+
+nav ul ul a {
+    display: block;
+    line-height: 30px;
+    background: rgba(10, 10, 10, 0.8);
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+nav > ul > li:hover > ul {
+    float: top;
+    display: block;
+}
+
+nav ul ul a:hover {
+    color: #FF0;
+}
+
+/*css ảnh logo*/
+#banner {
+    position: absolute;
+    top: 300px;
+}
+
+/*css địa chỉ*/
+#time {
+    list-style: none;
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    top: 400px;
+    left: 180px;
+}
+
+.buy-and-detail {
+    position: absolute;
+    top: 470px;
+    left: 350px;
+}
+
+.buy-and-detail > a {
+    text-decoration: none;
+    font-size: 18px;
+    border: white 1px solid;
+    border-radius: 5px;
+    padding: 12px 14px;
+    color: white;
+}
+
+.buy-and-detail > a:hover {
+    background-color: #FF8000;
+}
+
+/*css đồng hồ*/
+.dongho{
+    position: relative;
+}
+.dongho #countdown {
+    width: 465px;
+    height: 112px;
+    text-align: center;
+    margin: auto;
+    padding: 24px 0;
+    position: absolute;
+    top: 350px;
+    bottom: 0px;
+    left: -50px;
+    right: 0;
+}
+
+#countdown #tiles {
+    position: relative;
+    z-index: 1;
+}
+
+#countdown #tiles > span {
+    width: 92px;
+    max-width: 92px;
+    font: bold 48px 'Droid Sans', Arial, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0 7px;
+    padding: 40px 0;
+    display: inline-block;
+    position: relative;
+}
+
+#countdown .labels {
+    width: 100%;
+    height: 25px;
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+}
+
+#countdown .labels li {
+    width: 102px;
+    font: bold 15px 'Droid Sans', Arial, sans-serif;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/*đổi chữ placeholder thành màu trắng*/
+::-webkit-input-placeholder {
+    color: white;
+    font-size: 18px;
+}
+
+/*css tìm kiếm */
+.logo {
+    padding-top: 10px;
+}
+.logo a{
+    margin-left: 10px;
+}
+.tim input {
+    width:250px;
+    height: 34px;
+    border-radius: 3px;
+}
+.tim{
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+}
+
