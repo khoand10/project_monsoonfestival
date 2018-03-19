@@ -4,9 +4,12 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea
-.idea/**/tasks.xml
-.idea/dictionaries
+.idea/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/inspectionProfiles
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
