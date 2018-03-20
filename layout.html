@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <script language="javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="script/jquery-1.8.2.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Ẩn nội dung các menu con, trừ cái đầu tiên
+            $('.ulWrapper li:gt(0) .ulChildrent').hide();
+            //Sự kiện khi click vào 1 men cha
+            $('.aParent').click(function () {
+                //ẩn toàn bộ các menu con
+                $('.ulChildrent').slideUp();
+                //hiện menu con của menu cấp 1 hiện tại được click
+                $(this).parent('li').find('.ulChildrent').slideDown();
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+<div id="menu">
+    <nav>
+        <header>
+            <img src="images/logo.PNG"/>
+        </header>
+        <div style="padding: 20px;">
+            <ul class="ulWrapper">
+                <li>
+                    <a href="javascript:void(0)" class="aParent">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="aParent">NGHỆ SĨ</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="aParent">SHOP</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="aParent">ĐỐI TÁC</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="aParent">TÌM HIỂU THÊM</a>
+                    <ul class="ulChildrent">
+                        <li><a href="#">MMF 2016</a></li>
+                        <li><a href="#">MMF 2015</a></li>
+                        <li><a href="#">MMF 2014</a></li>
+                        <li><a href="#">TRÁCH NHIỆM XÃ HỘI</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="aParent">THƯ VIỆN</a>
+                    <ul class="ulChildrent">
+                        <li><a href="#">HÌNH ẢNH</a></li>
+                        <li><a href="#">VIDEO</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0)" class="aParent">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <div class="tim">
+                <input style="background-color: rgba(91, 91, 91, 0.56);" type="text" name="timkiem" value=""
+                       placeholder="Tìm kiếm"/>
+                <div class="logo">
+                    <a href="#"> <img src="images/facebook.png" width="30px" height="30px"/></a>
+                    <a href="#"> <img src="images/youtube.png" width="30px" height="30px"/></a>
+                    <a href="#"><img src="images/instagram.png" width="30px" height="30px"/></a>
+                </div>
+                <a class="write" style="color:#FFFFFF"> © Copyright 2017 Powered by Creg</a>
+            </div>
+        </footer>
+    </nav>
+    <article>
+
+        <aside></aside>
+    </article>
+
+
+</div>
+</body>
+</html>
