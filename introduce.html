@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu</title>
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css"/>
+    <script language="javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="script/jquery-1.8.2.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Ẩn nội dung các menu con, trừ cái đầu tiên
+            $('.ulWrapper li:gt(0) .ulChildrent').hide();
+            //Sự kiện khi click vào 1 men cha
+            $('.aParent').click(function () {
+                //ẩn toàn bộ các menu con
+                $('.ulChildrent').slideUp();
+                //hiện menu con của menu cấp 1 hiện tại được click
+                $(this).parent('li').find('.ulChildrent').slideDown();
+            });
+        });
+    </script>
+
+    <style>
+        img {
+            -webkit-transition: all 0.7s ease-out;
+            -moz-transition: all 0.7s ease-out;
+            -o-transition: all 0.7s ease-out;
+            transition: all 0.7s ease-out;
+        }
+
+        .section {
+            text-align: center;
+            overflow: hidden;
+        }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
+                'navigation': true,
+                'afterLoad': function (anchorLink, index) {
+                    if (index == 2) {
+                        $('#iphone3, #iphone2, #iphone4').addClass('active');
+                    }
+                },
+
+                'onLeave': function (index, nextIndex, direction) {
+                    if (index == 3 && direction == 'down') {
+                        $('.section').eq(index - 1).removeClass('moveDown').addClass('moveUp');
+                    }
+                    else if (index == 3 && direction == 'up') {
+                        $('.section').eq(index - 1).removeClass('moveUp').addClass('moveDown');
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <header>
+        <a href="index.html"> <img src="images/logo.PNG"/></a>
+    </header>
+    <div class="menu_double" style="padding: 20px;">
+            <ul>
+                    <li><a href="introduce.html">GIỚI THIỆU</a>
+                    </li>
+                    <li><a href="#">NGHỆ SĨ</a>
+                    </li>
+                    <li><a href="#">SHOP</a>
+                    </li>
+                    <li><a href="#">ĐỐI TÁC</a>
+                    </li>
+                    <li><a href="#">TÌM HIỂU THÊM</a>
+                        <ul>
+                            <li><a href="#">MMF 2016</a></li>
+                            <li><a href="#">MMF 2015</a></li>
+                            <li><a href="#">MMF 2014</a></li>
+                            <li><a href="#">TRÁCH NHIỆM XÃ HỘI</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">THƯ VIỆN</a>
+                        <ul>
+                            <li><a href="gioithieu.html">HÌNH ẢNH</a></li>
+                            <li><a href="gioithieusinger.html">VIDEO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">LIÊN HỆ</a>
+                    </li>
+                </ul>
+    </div>
+    <footer>
+        <div class="tim">
+            <input style="background-color: rgba(91, 91, 91, 0.56);border-radius:20px; " type="text" name="timkiem"
+                   value="" placeholder="Tìm kiếm"/>
+            <div class="logo">
+                <a href="#"> <img src="images/facebook.png" width="30px" height="30px"/></a>
+                <a href="#"> <img src="images/youtube.png" width="30px" height="30px"/></a>
+                <a href="#"><img src="images/instagram.png" width="30px" height="30px"/></a>
+            </div>
+            <a class="write" style="color:#FFFFFF"> © Copyright 2017 Powered by Creg</a>
+        </div>
+    </footer>
+</nav>
+<article>
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <p class="blockquote">
+                Sau ba năm diễn ra, đến ngày hôm nay, tôi tin rằng mình đã có thể khẳng định: Monsoon Music
+                Festival,
+                hay Lễ hội Âm nhạc Quốc tế Gió mùa, đã trở thành một món ăn tinh thần quen thuộc đối với người yêu
+                âm
+                nhạc Thủ đô. Mỗi năm đi qua, tôi được gặp lại ngày càng nhiều những gương mặt quen thuộc: những bạn
+                trẻ
+                đắm mình trong giai điệu, những thế hệ gia đình chơi đùa trên cỏ,người cha già đưa con trai tật
+                nguyền
+                vượt quãng đường xa đến với Hoàng Thành Thăng Long... Chính những gương mặt quen thuộc ngày càng
+                nhiều
+                thêm đó đã làm nên một Lễ hội Âm nhạc Quốc tế Gió mùa thành công và đáng nhớ với mỗi người.
+                <br><br>
+                Đã đến lúc Monsoon Music Festival tiếp tục con đường của mình: không chỉ là một Lễ hội Âm nhạc và
+                Văn
+                hoá đơn thuần, nơi người dân Thủ đô Hà Nội tìm đến và chia sẻ niềm vui; chúng tôi mong muốn đưa Lễ
+                hội
+                Âm nhạc Quốc tế Gió mùa trở thành biểu tượng văn hoá của Thủ đô Hà Nội, biểu tượng của một thế hệ
+                trẻ
+                trung và sáng tạo hơn; để người Hà Nội có thể tự hào giới thiệu với những người bạn đến từ khắp nơi
+                trên
+                thế giới: "Đến với Hà Nội, phải dự Lễ hội Âm nhạc Gió mùa".Hãy cùng chúng tôi chia sẻ tinh thần của
+                cơn
+                Gió mùa Âm nhạc này đến với Việt Nam và thế giới.
+                <br/>
+                <span class="author">Quốc Trung, Nhạc sĩ/Nhà sản xuất - Đạo diễn Lễ Hội Âm Nhạc Gió Mùa</span>
+            </p>
+        </div>
+        <div class="section" id="section1">
+
+            <div class="information" style="width: 100%">
+                <div style="height: 153.4px;width: 33%;float: left">
+                    <p style="color: white; font-size: 50px">80000</p><br>
+                    <p style="color: white; font-size: 20px">Khán giả tham dự</p>
+                </div>
+                <div style="height: 153.4px;width: 33% ; float: left">
+                    <p style="color: white; font-size: 50px">50</p><br>
+                    <p style="color: white; font-size: 20px">Nghệ Sỹ</p>
+                </div>
+                <div style="height: 153.4px;width: 33%; float: left">
+                    <p style="color: white; font-size: 50px">3</p><br>
+                    <p style="color: white; font-size: 20px">Số lần tổ chức</p>
+                </div>
+                <div style="height: 153.4px;width: 33%;float: left">
+                    <p style="color: white; font-size: 50px">10000000</p><br>
+                    <p style="color: white; font-size: 20px">Lượt tiếp cận trên Facebook</p>
+                </div>
+                <div style="height: 153.4px;width: 33%;float: left">
+                    <p style="color: white; font-size: 50px">32</p><br>
+                    <p style="color: white; font-size: 20px">Số lượng nhà tài trợ</p>
+                </div>
+                <div style="height: 153.4px;width: 33%;float: left">
+                    <p style="color: white; font-size: 50px">1000</p><br>
+                    <p style="color: white; font-size: 20px">Ekip tổ chức và tình nguyện viên</p>
+                </div>
+            </div>
+            <br style="clear: both">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="images/slide-1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="images/slide-2.jpg" style="width:100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+
+        </div>
+        <div class="section moveDown" id="section2">
+            <div id="banner">
+                <img width="100%" src="images/banner-vi.png"/>
+            </div>
+            <div class="menu-information">
+                <div id="time"><a>10-12 Tháng Mười Một 2017</a>
+                    <i class="fa fa-map-marker" style="font-size:23px"></i><a>Hoàng Thành - Thăng Long - Hà Nội</a>
+                </div>
+            </div>
+
+        </div>
+</article>
+</body>
+</html>

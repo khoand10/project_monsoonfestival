@@ -1,0 +1,112 @@
+body {
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.75;
+    background: black;
+}
+
+/* .list .link {
+    position: relative;
+    display: inline-block;
+}
+
+
+img {
+    width: 250px;
+    transition: transform .2s;
+    height: 170px;
+    padding: 10px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    background: #9b9a9a;
+    opacity: 0.6;
+}
+
+.label {
+    width: 250px;
+    text-align: center;
+    height: auto;
+    opacity: 0.7;
+    background: rgba(44, 44, 44, 0.8);
+}
+
+.label a {
+    color: white;
+
+    font-size: 16px;
+} */
+
+.container {
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: auto;
+}
+
+.image {
+    transition: transform .2s;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 25px;
+    bottom: 0;
+    left: 10px;
+    right: 0;
+    height: 130px;
+    width: 230px;
+    transition: .3s ease;
+
+}
+
+ .container:hover .image {
+    transform: scale(1.1);
+    background: #9b9a9a;
+    opacity: 0.6;
+}
+
+.container:hover .overlay {
+    background-color: rgb(66, 65, 65);
+    opacity: 0.7;
+}
+
+.icon {
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 0px;
+    left: 120px;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.fa-user:hover {
+    color: #eee;
+}
+
+.container .label {
+    width: 250px;
+    text-align: center;
+    height: auto;
+    opacity: 0.7;
+    background: rgba(44, 44, 44, 0.8);
+}
+
+.container .label a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.label a {
+    color: white;
+    font-size: 15px;
+font-family: 'Montserrat', sans-serif;
+line-height: 1.75;
+}
